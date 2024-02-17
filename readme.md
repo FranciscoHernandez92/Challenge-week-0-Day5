@@ -19,9 +19,9 @@
 Si tiene alguna mayúscula, debe devolver "The text contains capital letters"
 Si tiene algún guion bajo, debe devolver "The text contains underscores"
 Si el texto está vacío, debe devolver "You must provide some text"
-Desafíos adicionales
+
 9.Crea una función que reciba un texto en camelCase y devuelva el texto escrito en kebab-case, en snake_case, en camelCase y en PascalCase...
 
 10.Crea una función que reciba un texto y devuelva el mismo texto con todas las vocales acentuadas reemplazadas por vocales sin acentuar y todas las vocales sin acentuar reemplazadas por vocales acentuadas.
 
-10.Crea una función que reciba un texto y devuelva el mismo texto con todas las letras en mayúsculas y todas las letras en minúsculas intercambiadas.
+11.Crea una función que reciba un texto y devuelva el mismo texto con todas las letras en mayúsculas y todas las letras en minúsculas intercambiadas.
