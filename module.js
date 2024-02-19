@@ -13,19 +13,40 @@ export const passwordCreate = (size) => {
     return 'Your password needs a minimum of six characters'
   }
   let randomPassword = ''
-  const passwordOptions = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
-  for (let i = 0; i < size; i++){
-    const randomIndex = Math.floor(Math.random() * passwordOptions.length)
+  const passwordCapitalLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+  const passwordNumbers = '0123456789'
+  const paswordLetters = 'abcdefghijklmnopqrstuvwxyz'
+  let passwordOptions = passwordCapitalLetters + passwordNumbers + paswordLetters
+  for (let i = 0; i < size ; i++){
+    const randomIndex = Math.floor(Math.random() * passwordCapitalLetters.length) + 
+    Math.floor(Math.random() * paswordLetters.length) + 
+    Math.floor(Math.random() * passwordNumbers.length)
     randomPassword += passwordOptions[randomIndex]
   }
   return randomPassword
 }
+
 //3.
 export const userNames = (noun,length) => {
   const filteredNames = noun.filter((i) => i.length < length)
  return filteredNames
 }
 //4.
+//export const makeStadistics = (arra = []) => {
+  //const totalSum = 0
+  //arr.forEach((item) => (totalSum += item))
+  //const mean = totalSum / arr.length
+  //const sort = arr.sort((a,b) => a - b)   //(a,b) => a - b es el orden numerico correcto, PORQUE ES ASI
+ // const middle = Math.floor(sort.length / 2)
+ // const median = arr.length % 2 === 0 ?
+  //(sort[middle - 1] + sort[middle] / 2)
+  //:sort[middle]
+  //const mode = {}
+  //return {media: mean,    
+  //mediana: median,
+  //moda: mode,
+  //suma: totalSum}
+//}
 
 //5.
 export const countWords = (str) => {
@@ -47,8 +68,8 @@ export const groupEvenAndOdd = (number) => {
       even.push(i)
     } 
   }
-  return `numeros pares dentro de ${number}: ${odd},
-numeros impares dentro de ${number}: ${even}`
+  return `numeros pares hasta ${number}: ${odd},
+numeros impares hasta ${number}: ${even}`
   }
 //8.
 export const transformWordToCamelCase = (phrase) => {
